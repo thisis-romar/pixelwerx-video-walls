@@ -1,0 +1,342 @@
+/* Hero Section Styles - Professional Rock Touring Aesthetic */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--stage-black);
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+.particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(74, 144, 194, 0.1) 0%,
+    rgba(10, 10, 10, 0.9) 50%,
+    rgba(245, 166, 35, 0.1) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 1400px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 0 2rem;
+  align-items: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.highlight {
+  background: var(--gradient-neon);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+.hero-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--electric-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.separator {
+  color: var(--neon-green);
+  font-weight: bold;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--light-gray);
+  max-width: 600px;
+}
+
+.competitive-advantages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.advantage-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.advantage-item:hover {
+  background: rgba(0, 212, 255, 0.2);
+  border-color: var(--electric-blue);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.advantage-icon {
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 10px var(--electric-blue));
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-large {
+  padding: 1.2rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 1.2rem 2.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+.btn-secondary:hover {
+  background: var(--neon-green);
+  color: var(--deep-black);
+  box-shadow: var(--glow-neon);
+  transform: translateY(-2px);
+}
+
+.pricing-preview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(57, 255, 20, 0.1);
+  border: 1px solid rgba(57, 255, 20, 0.3);
+  border-radius: 8px;
+}
+
+.pricing-label {
+  font-family: var(--font-mono);
+  color: var(--light-gray);
+  font-size: 0.9rem;
+}
+
+.pricing-amount {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--neon-green);
+  text-shadow: var(--glow-neon);
+}
+
+.pricing-note {
+  font-family: var(--font-mono);
+  color: var(--neon-green);
+  font-size: 0.9rem;
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.floating-specs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  position: relative;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: rgba(0, 212, 255, 0.1);
+  border: 2px solid rgba(0, 212, 255, 0.3);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.spec-item:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.spec-item:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.spec-item:hover {
+  border-color: var(--electric-blue);
+  box-shadow: var(--glow-electric);
+  transform: translateY(-10px);
+}
+
+.spec-number {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--electric-blue);
+  text-shadow: var(--glow-electric);
+}
+
+.spec-label {
+  font-family: var(--font-mono);
+  color: var(--light-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.5rem;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--electric-blue);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  z-index: 4;
+}
+
+.scroll-arrow {
+  width: 2px;
+  height: 30px;
+  background: var(--electric-blue);
+  position: relative;
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+.scroll-arrow::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: -4px;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--electric-blue);
+  border-bottom: 2px solid var(--electric-blue);
+  transform: rotate(45deg);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .competitive-advantages {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .floating-specs {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .spec-item {
+    padding: 1rem;
+  }
+  
+  .spec-number {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelWerx - Video Wall Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1><i class="fas fa-tv"></i> PixelWerx</h1>
+                <span class="tagline">Professional Video Wall Solutions</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#dashboard" class="nav-link active">Dashboard</a></li>
+                <li><a href="#panels" class="nav-link">Panel Inventory</a></li>
+                <li><a href="#configurator" class="nav-link">Wall Configurator</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section active">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h2>Video Wall Dashboard</h2>
+                    <p>Manage your video wall panel inventory and configurations</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-th-large"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="total-panels">0</h3>
+                            <p>Total Panels</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="total-batches">0</h3>
+                            <p>Active Batches</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3 id="color-variants">0</h3>
+                            <p>Color Variants</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Active</h3>
+                            <p>System Status</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="batch-overview">
+                    <h3>Batch Overview</h3>
+                    <div id="batch-cards" class="batch-grid">
+                        <!-- Batch cards will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panel Inventory Section -->
+        <section id="panels" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Panel Inventory</h2>
+                    <div class="filter-controls">
+                        <select id="batch-filter">
+                            <option value="">All Batches</option>
+                        </select>
+                        <select id="color-filter">
+                            <option value="">All Colors</option>
+                        </select>
+                        <input type="text" id="search-input" placeholder="Search panels...">
+                    </div>
+                </div>
+                
+                <div class="panels-grid" id="panels-grid">
+                    <!-- Panel cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Wall Configurator Section -->
+        <section id="configurator" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Video Wall Configurator</h2>
+                    <p>Design your custom video wall layout</p>
+                </div>
+                
+                <div class="configurator-container">
+                    <div class="configurator-controls">
+                        <h3>Configuration Settings</h3>
+                        
+                        <div class="control-group">
+                            <label for="wall-width">Wall Width (panels)</label>
+                            <input type="range" id="wall-width" min="1" max="8" value="3">
+                            <span id="width-value">3</span>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="wall-height">Wall Height (panels)</label>
+                            <input type="range" id="wall-height" min="1" max="6" value="2">
+                            <span id="height-value">2</span>
+                        </div>
+                        
+                        <div class="control-group">
+                            <label for="preferred-batch">Preferred Batch</label>
+                            <select id="preferred-batch">
+                                <option value="">Auto Select</option>
+                            </select>
+                        </div>
+                        
+                        <button id="generate-config" class="btn btn-primary">
+                            <i class="fas fa-magic"></i> Generate Configuration
+                        </button>
+                        
+                        <div class="config-info">
+                            <h4>Configuration Details</h4>
+                            <div id="config-details">
+                                <p>Panels Required: <span id="panels-required">6</span></p>
+                                <p>Estimated Cost: <span id="estimated-cost">Contact for pricing</span></p>
+                                <p>Installation Time: <span id="install-time">2-4 hours</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="configurator-preview">
+                        <h3>Wall Preview</h3>
+                        <div id="wall-preview" class="wall-preview">
+                            <!-- Wall preview will be generated by JavaScript -->
+                        </div>
+                        
+                        <div class="preview-actions">
+                            <button id="save-config" class="btn btn-secondary">
+                                <i class="fas fa-save"></i> Save Configuration
+                            </button>
+                            <button id="export-config" class="btn btn-secondary">
+                                <i class="fas fa-download"></i> Export Specs
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contact PixelWerx</h2>
+                    <p>Get in touch with our video wall specialists</p>
+                </div>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Get Professional Support</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone Support</h4>
+                                <p>+1 (555) 123-PIXEL</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Support</h4>
+                                <p>support@pixelwerx.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Mon-Fri: 8AM-6PM EST</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="project-type">Project Type</label>
+                                <select id="project-type">
+                                    <option value="">Select Project Type</option>
+                                    <option value="new-installation">New Installation</option>
+                                    <option value="upgrade">System Upgrade</option>
+                                    <option value="maintenance">Maintenance</option>
+                                    <option value="consultation">Consultation</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="4" placeholder="Tell us about your video wall needs..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3><i class="fas fa-tv"></i> PixelWerx</h3>
+                    <p>Professional video wall solutions for modern businesses</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Video Wall Design</a></li>
+                        <li><a href="#">Installation</a></li>
+                        <li><a href="#">Maintenance</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> info@pixelwerx.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-PIXEL</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PixelWerx. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

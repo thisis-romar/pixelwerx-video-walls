@@ -1,0 +1,231 @@
+.pricing-calculator {
+  padding: 120px 0;
+  background: linear-gradient(135deg, 
+    rgba(0, 212, 255, 0.05) 0%, 
+    rgba(57, 255, 20, 0.03) 50%, 
+    rgba(0, 212, 255, 0.05) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-calculator::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 50%, 
+    rgba(0, 212, 255, 0.1) 0%, 
+    transparent 50%);
+  animation: pulse 4s ease-in-out infinite;
+}
+
+.calculator-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.calculator-form {
+  background: rgba(15, 15, 15, 0.9);
+  border: 1px solid var(--electric-blue);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.calculator-form h3 {
+  color: var(--electric-blue);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 0 0 20px var(--electric-blue);
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  display: block;
+  color: var(--neon-green);
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+select {
+  width: 100%;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--electric-blue);
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--neon-green);
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+}
+
+.slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+  background: rgba(0, 212, 255, 0.3);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--neon-green);
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--neon-green);
+  transition: all 0.3s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px var(--neon-green);
+}
+
+.pricing-result {
+  margin-top: 40px;
+  padding: 30px;
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: 15px;
+  border: 1px solid var(--electric-blue);
+}
+
+.price-breakdown {
+  margin-bottom: 25px;
+}
+
+.breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.breakdown-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--neon-green);
+  border-top: 2px solid var(--neon-green);
+  margin-top: 15px;
+}
+
+.total-amount {
+  font-size: 2rem;
+  text-shadow: 0 0 20px var(--neon-green);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.pricing-advantages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.advantage {
+  color: var(--neon-green);
+  font-weight: 600;
+  text-align: center;
+  padding: 8px;
+  background: rgba(57, 255, 20, 0.1);
+  border-radius: 8px;
+}
+
+.pricing-comparison {
+  background: rgba(15, 15, 15, 0.9);
+  border: 1px solid var(--neon-green);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(57, 255, 20, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.pricing-comparison h3 {
+  color: var(--neon-green);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 0 0 20px var(--neon-green);
+}
+
+.comparison-table {
+  display: grid;
+  gap: 15px;
+}
+
+.comparison-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.price-good {
+  color: var(--neon-green);
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 0 0 10px var(--neon-green);
+}
+
+.price-bad {
+  color: #ff4444;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 0 0 10px #ff4444;
+}
+
+.time-good {
+  color: var(--neon-green);
+  font-weight: bold;
+}
+
+.time-bad {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .calculator-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .calculator-form,
+  .pricing-comparison {
+    padding: 25px;
+  }
+  
+  .calculator-form h3,
+  .pricing-comparison h3 {
+    font-size: 1.5rem;
+  }
+}

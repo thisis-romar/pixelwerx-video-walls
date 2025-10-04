@@ -1,0 +1,194 @@
+/* PixelWerx Design System - Professional Rock Touring Aesthetic */
+
+/* Import Professional Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Montserrat:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600;700&family=Roboto+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Primary Professional Colors - Industrial & Concert Production */
+  --steel-blue: #4A90C2;
+  --amber-accent: #F5A623;
+  --deep-charcoal: #1C1C1E;
+  
+  /* Professional Dark Base - Production Aesthetic */
+  --stage-black: #0A0A0A;
+  --equipment-black: #141414;
+  --control-gray: #2C2C2E;
+  --booth-gray: #3A3A3C;
+  --cable-gray: #48484A;
+  
+  /* Accent Colors - Professional Edge */
+  --warm-white: #F2F2F7;
+  --cool-gray: #8E8E93;
+  --production-blue: #007AFF;
+  --warning-amber: #FF9500;
+  
+  /* Typography */
+  --font-heading: 'Montserrat', 'Roboto', sans-serif;
+  --font-body: 'Source Sans Pro', 'Roboto', sans-serif;
+  --font-mono: 'Roboto Mono', monospace;
+  
+  /* Professional Lighting Effects - Subtle & Refined */
+  --glow-steel: 0 0 15px rgba(74, 144, 194, 0.3), 0 0 30px rgba(74, 144, 194, 0.1);
+  --glow-amber: 0 0 15px rgba(245, 166, 35, 0.4), 0 0 30px rgba(245, 166, 35, 0.2);
+  --backstage-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  
+  /* Gradients - Professional & Industrial */
+  --gradient-stage: linear-gradient(135deg, var(--stage-black), var(--equipment-black), var(--control-gray));
+  --gradient-steel: linear-gradient(45deg, var(--steel-blue), rgba(74, 144, 194, 0.7));
+  --gradient-professional: linear-gradient(180deg, var(--stage-black), var(--deep-charcoal));
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--stage-black);
+  color: var(--warm-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Typography System */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-weight: 900;
+  background: var(--gradient-steel);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow-steel);
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  color: var(--steel-blue);
+  text-shadow: var(--glow-steel);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--amber-accent);
+  text-shadow: var(--glow-amber);
+}
+
+/* Interactive Elements */
+.btn-primary {
+  background: var(--gradient-steel);
+  border: 2px solid var(--steel-blue);
+  color: var(--warm-white);
+  padding: 1rem 2rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: var(--backstage-shadow);
+}
+
+.btn-primary:hover {
+  box-shadow: var(--glow-steel), var(--backstage-shadow);
+  transform: translateY(-2px);
+  background: linear-gradient(45deg, var(--amber-accent), var(--steel-blue));
+  color: var(--stage-black);
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(245,166,35,0.3), transparent);
+  transition: left 0.5s;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+/* Professional Border Effects */
+.professional-border {
+  border: 2px solid var(--steel-blue);
+  box-shadow: var(--glow-steel);
+  transition: all 0.3s ease;
+}
+
+.professional-border:hover {
+  border-color: var(--amber-accent);
+  box-shadow: var(--glow-amber);
+}
+
+.stage-border {
+  border: 1px solid var(--control-gray);
+  box-shadow: var(--backstage-shadow);
+}
+
+/* Professional Animations */
+@keyframes steelGlow {
+  0% { box-shadow: var(--glow-steel); }
+  50% { box-shadow: var(--glow-steel), 0 0 30px rgba(74, 144, 194, 0.5); }
+  100% { box-shadow: var(--glow-steel); }
+}
+
+@keyframes amberPulse {
+  0% { box-shadow: var(--glow-amber); }
+  50% { box-shadow: var(--glow-amber), 0 0 25px rgba(245, 166, 35, 0.6); }
+  100% { box-shadow: var(--glow-amber); }
+}
+
+/* Utility Classes */
+.glow-steel { text-shadow: var(--glow-steel); }
+.glow-amber { text-shadow: var(--glow-amber); }
+
+.text-steel { color: var(--steel-blue); }
+.text-amber { color: var(--amber-accent); }
+.text-professional { color: var(--warm-white); }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+  
+  .btn-primary {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--control-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--steel-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--amber-accent);
+  box-shadow: var(--glow-amber);
+}
