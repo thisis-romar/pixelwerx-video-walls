@@ -1,0 +1,54 @@
+<svg width="1500" height="1500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1500">
+  <!-- 3x3 Configuration Test Pattern -->
+  <rect width="1500" height="1500" fill="#000"/>
+  
+  <!-- Panel grid divisions -->
+  <g stroke="#444" stroke-width="4" fill="none">
+    <!-- Vertical divisions -->
+    <line x1="500" y1="0" x2="500" y2="1500"/>
+    <line x1="1000" y1="0" x2="1000" y2="1500"/>
+    <!-- Horizontal divisions -->
+    <line x1="0" y1="500" x2="1500" y2="500"/>
+    <line x1="0" y1="1000" x2="1500" y2="1000"/>
+  </g>
+  
+  <!-- Panel labels -->
+  <g fill="#fff" font-family="Arial" font-size="32" text-anchor="middle">
+    <text x="250" y="270">1</text>
+    <text x="750" y="270">2</text>
+    <text x="1250" y="270">3</text>
+    <text x="250" y="770">4</text>
+    <text x="750" y="770">5</text>
+    <text x="1250" y="770">6</text>
+    <text x="250" y="1270">7</text>
+    <text x="750" y="1270">8</text>
+    <text x="1250" y="1270">9</text>
+  </g>
+  
+  <!-- Alignment crosses -->
+  <g stroke="#0f0" stroke-width="3">
+    <!-- Center cross -->
+    <line x1="740" y1="750" x2="760" y2="750"/>
+    <line x1="750" y1="740" x2="750" y2="760"/>
+    
+    <!-- Corner crosses -->
+    <line x1="240" y1="250" x2="260" y2="250"/>
+    <line x1="250" y1="240" x2="250" y2="260"/>
+    
+    <line x1="1240" y1="1250" x2="1260" y2="1250"/>
+    <line x1="1250" y1="1240" x2="1250" y2="1260"/>
+  </g>
+  
+  <!-- Color calibration zones -->
+  <g opacity="0.6">
+    <rect x="50" y="50" width="150" height="150" fill="#ff0000"/>
+    <rect x="1300" y="50" width="150" height="150" fill="#00ff00"/>
+    <rect x="50" y="1300" width="150" height="150" fill="#0000ff"/>
+    <rect x="1300" y="1300" width="150" height="150" fill="#ffffff"/>
+  </g>
+  
+  <!-- Configuration info -->
+  <rect x="600" y="25" width="300" height="60" fill="#333" stroke="#666"/>
+  <text x="750" y="45" text-anchor="middle" fill="#fff" font-family="Arial" font-size="16">3×3 Grid Configuration</text>
+  <text x="750" y="65" text-anchor="middle" fill="#ccc" font-family="Arial" font-size="12">9 Panels • 3.0×3.0m</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg width="1000" height="1500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1500">
+  <!-- 2x3 Configuration Test Pattern -->
+  <rect width="1000" height="1500" fill="#000"/>
+  
+  <!-- Panel divisions -->
+  <g stroke="#444" stroke-width="4" fill="none">
+    <!-- Vertical division -->
+    <line x1="500" y1="0" x2="500" y2="1500"/>
+    <!-- Horizontal divisions -->
+    <line x1="0" y1="500" x2="1000" y2="500"/>
+    <line x1="0" y1="1000" x2="1000" y2="1000"/>
+  </g>
+  
+  <!-- Panel labels -->
+  <g fill="#fff" font-family="Arial" font-size="36" text-anchor="middle">
+    <text x="250" y="270">Panel 1</text>
+    <text x="750" y="270">Panel 2</text>
+    <text x="250" y="770">Panel 3</text>
+    <text x="750" y="770">Panel 4</text>
+    <text x="250" y="1270">Panel 5</text>
+    <text x="750" y="1270">Panel 6</text>
+  </g>
+  
+  <!-- Color test zones -->
+  <rect x="100" y="100" width="300" height="100" fill="#ff0000" opacity="0.7"/>
+  <rect x="600" y="100" width="300" height="100" fill="#00ff00" opacity="0.7"/>
+  <rect x="100" y="600" width="300" height="100" fill="#0000ff" opacity="0.7"/>
+  <rect x="600" y="600" width="300" height="100" fill="#ffff00" opacity="0.7"/>
+  <rect x="100" y="1100" width="300" height="100" fill="#ff00ff" opacity="0.7"/>
+  <rect x="600" y="1100" width="300" height="100" fill="#00ffff" opacity="0.7"/>
+  
+  <!-- Configuration info -->
+  <rect x="350" y="50" width="300" height="60" fill="#333" stroke="#666"/>
+  <text x="500" y="75" text-anchor="middle" fill="#fff" font-family="Arial" font-size="16">2×3 Grid Configuration</text>
+  <text x="500" y="95" text-anchor="middle" fill="#ccc" font-family="Arial" font-size="12">12 Panels • 2.0×3.0m</text>
+</svg>
