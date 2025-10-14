@@ -2,6 +2,10 @@
 
 A professional client-facing website for video wall panel management and configuration.
 
+## Live Demo
+
+🌐 **[View Live Site on GitHub Pages](https://thisis-romar.github.io/pixelwerx-video-walls/)**
+
 ## Project Overview
 
 PixelWerx is a comprehensive web application designed to help clients manage video wall installations, configure panel layouts, and track inventory across multiple batches and color variants.
