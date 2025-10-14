@@ -2,6 +2,10 @@
 
 A comprehensive video wall management system and sales website for PixelWerx, providing professional video wall solutions for modern businesses.
 
+## Live Demo
+
+🌐 **[View Live Site on GitHub Pages](https://thisis-romar.github.io/pixelwerx-video-walls/)**
+
 ## Project Structure
 
 ```
